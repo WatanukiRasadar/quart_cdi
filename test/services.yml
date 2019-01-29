@@ -1,0 +1,10 @@
+parameters:
+  test: test
+  client: '@parameter:test'
+  app.service.test.class: '@class:service:ServiceTest'
+
+services:
+  app.service.test:
+    factory: '@parameter:app.service.test.class'
+    parameters:
+      parameter: 'client'
